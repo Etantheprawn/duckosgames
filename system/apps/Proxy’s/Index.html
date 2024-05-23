@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iframe Switcher</title>
+    <title>Iframe Switcher with Descriptions</title>
 </head>
 <body>
     <h1>Information Page</h1>
     <p>Select a website to view:</p>
     <select id="websiteSelector" onchange="changeIframeSrc()">
-        <option value="https://www.example1.com">Example 1</option>
-        <option value="https://www.example2.com">Example 2</option>
-        <option value="https://www.example3.com">Example 3</option>
-        <option value="https://www.example4.com">Example 4</option>
+        <option value="https://www.example1.com" data-description="Description for Example 1">Example 1</option>
+        <option value="https://www.example2.com" data-description="Description for Example 2">Example 2</option>
+        <option value="https://www.example3.com" data-description="Description for Example 3">Example 3</option>
+        <option value="https://www.example4.com" data-description="Description for Example 4">Example 4</option>
     </select>
+
+    <div id="descriptionBox">
+        <p id="descriptionText">Description for Example 1</p>
+    </div>
 
     <iframe id="contentFrame" width="100%" height="600px" src="https://www.example1.com"></iframe>
 
